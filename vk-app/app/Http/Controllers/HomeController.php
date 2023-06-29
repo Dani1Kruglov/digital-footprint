@@ -209,12 +209,13 @@ class HomeController extends Controller
 
 
     public function grade($commentsArray, $postsArray){
-        if(!empty($postsArray)){
+        if((!empty($postsArray)) && (!empty($commentsArray))){
+            $userActionsArray = array_merge($commentsArray, $postsArray);
+        }
+        elseif(!empty($postsArray)){
             $userActionsArray = $postsArray;
         }elseif (!empty($commentsArray)){
             $userActionsArray = $commentsArray;
-        }elseif((!empty($postsArray)) && (!empty($commentsArray))){
-            $userActionsArray = array_merge($commentsArray, $postsArray);
         }
 
         $gradeArray = [];
