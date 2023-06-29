@@ -213,7 +213,7 @@ class HomeController extends Controller
             $userActionsArray = $postsArray;
         }elseif (!empty($commentsArray)){
             $userActionsArray = $commentsArray;
-        }else{
+        }elseif((!empty($postsArray)) && (!empty($commentsArray))){
             $userActionsArray = array_merge($commentsArray, $postsArray);
         }
 
