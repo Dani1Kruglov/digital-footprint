@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+  }
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222020;
+    font-family:  'Graphik LCG', sans-serif;
+}
+
+.header {
+    color: white;
+}
+
+.input {
+    padding: 20px;
+    background-color: #2f1ce4;
+    color: white;
+    outline: none;
+}
+
+/* Убрал боковые стрелки для input type="number" */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.button {
+    padding: 20px;
+    color: white;
+    background-color: transparent;
+    border: 3px solid white;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.button:hover {
+    opacity: 0.5;
+  }
+
+  .button:active {
+    opacity: 0.3;
+  }
